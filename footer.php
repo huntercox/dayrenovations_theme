@@ -1,3 +1,9 @@
 <footer>
-  <p><?php bloginfo('name'); ?></p>
+  <p><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
 </footer>
+
+</div>
+<!-- END: Grid-Layout -->
+
+</body>
+</html>

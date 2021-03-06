@@ -1,0 +1,19 @@
+@import 'variables';
+
+// MiniReset.CSS
+@import '../../node_modules/minireset.css/minireset.sass';
+
+// Hamburger Menu
+@import '../../node_modules/hamburgers/_sass/hamburgers/hamburgers';
+
+// Splide.JS
+@import './node_modules/@splidejs/splide/dist/css/splide.min.css';
+
+@import 'typography';
+@import 'layout';
+@import 'header';
+@import 'footer';
+@import 'banner';
+
+//  Pages
+@import 'pages/home';

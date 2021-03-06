@@ -1,0 +1,63 @@
+.header {
+  background-color: $orange;
+  position: relative;
+  z-index: 99;
+
+  &__inner {
+    margin: 0 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+}
+
+// Logo / Company Name
+#logo {
+  font-size: 20px;
+  line-height: 42px;
+
+  a {
+    color: $black;
+  }
+}
+
+
+// Hamburger menu
+.hamburger {
+  margin-top: 2px;
+  &:focus {
+    outline: none;
+  }
+}
+
+// Navigation
+#navMenu {
+  display: none;
+  position: absolute;
+  z-index: 98;
+  left: auto;
+  right: 0;
+  top: 100%;
+  bottom: auto;
+  width: 100px;
+  background-color: $black;
+  border-top: 1px solid $darkgray;
+
+  /* Add slide to menu */
+    // transform: translateX(-200px);
+    // transition: transform 400ms ease-in-out;
+
+  // Toggle w/ Javascript
+  &.showNav {
+    display: block;
+    /* Add slide to menu */
+    //  transform: translateX(0);
+  }
+
+  .menu {
+    li {
+      padding: 6px 8px;
+      border-bottom: 1px solid $lightorange;
+    }
+  }
+}

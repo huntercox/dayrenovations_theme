@@ -1,0 +1,18 @@
+footer {
+  background-color: $gray;
+  border-top: 1px solid $darkgray;
+
+  margin-top: 80px;
+  padding: 30px 10px;
+  color: $black;
+
+  p {
+    padding: 4px 0;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  a {
+    color: $black;
+  }
+}

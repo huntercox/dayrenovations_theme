@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Roboto:ital,wght@0,300;0,700;1,300;1,700&display=swap');
+
+body {
+  color: $black;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.5px;
+}
+header {
+
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Nothing You Could Do', cursive;
+  font-weight: bold;
+}
+
+// Paragraphs
+p {
+  line-height: 1.15;
+}
+
+// Links
+a {
+  text-decoration: none;
+  color: $darkorange;
+  transition: color linear 100ms;
+
+  &:hover {
+    color: $orange;
+  }
+  &:visited {
+    color: $darkorange;
+  }
+}
+
+// Pages
+.page {
+  h2, &__title {
+    color: $orange;
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 0px;
+    border-bottom: 1px solid $darkorange;
+    margin: 10px 0 40px 0;
+  }//.page__title
+
+  h3, &__subheading {
+    margin: 20px -10px 10px -10px;
+    padding: 4px 0px 5px 10px;
+    background-color: $lightorange;
+    color: $white;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+  }
+
+  &__content {
+    letter-spacing: 0.5px;
+  }//.page__content
+}
