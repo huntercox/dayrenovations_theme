@@ -19,6 +19,19 @@
         <a href="<?php echo $facebook; ?>" target="_blank"><i class="fab fa-facebook-square"></i>Facebook</a>
       <?php endif; ?>
     </div><!-- /.contact-info -->
+
+    <div class="sub-menu">
+      <nav role="navigation">
+        <?php
+          wp_nav_menu(
+            array(
+              'menu' => 'footer-menu',
+              'container' => 'ul'
+            )
+          );
+        ?>
+      </nav>
+    </div><!-- /.sub-menu -->
   </div><!-- /.inner -->
 
 
