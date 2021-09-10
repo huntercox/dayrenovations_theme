@@ -5479,6 +5479,9 @@ body {
 
 .hamburger {
   margin-top: 2px; }
+  @media (min-width: 992px) {
+    .hamburger {
+      display: none; } }
   .hamburger:focus {
     outline: none; }
 
@@ -5492,21 +5495,45 @@ body {
   bottom: auto;
   width: 10rem;
   background-color: #ff950a;
-  border-top: 1px solid #464646;
-  /* Add slide to menu */ }
+  border-top: 1px solid #464646; }
+  @media (min-width: 992px) {
+    #navMenu {
+      display: block;
+      width: auto;
+      border: none;
+      z-index: 1;
+      right: auto;
+      position: relative; } }
   #navMenu.showNav {
-    display: block;
-    /* Add slide to menu */ }
+    display: block; }
+    @media (min-width: 992px) {
+      #navMenu.showNav {
+        display: none; } }
   #navMenu .menu {
     border: 1px solid #464646; }
+    @media (min-width: 992px) {
+      #navMenu .menu {
+        border: none;
+        display: flex;
+        justify-content: flex-end; } }
     #navMenu .menu li {
       padding: 1rem 0 0.8rem 0.8rem;
       border-bottom: 1px solid #464646; }
+      @media (min-width: 992px) {
+        #navMenu .menu li {
+          border: none;
+          padding-left: 3rem !important; } }
       #navMenu .menu li a {
         color: #191919;
         font-size: 1.2rem;
         font-weight: bold;
         padding: 0.4rem; }
+        @media (min-width: 992px) {
+          #navMenu .menu li a {
+            transition: color ease 100ms;
+            padding: 0; }
+            #navMenu .menu li a:hover {
+              color: #464646; } }
 
 footer {
   background-color: #191919;

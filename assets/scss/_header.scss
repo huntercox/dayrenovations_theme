@@ -36,6 +36,10 @@
 .hamburger {
   margin-top: 2px;
 
+  @media (min-width: $laptop) {
+    display: none;
+  }
+
   &:focus {
     outline: none;
   }
@@ -54,29 +58,57 @@
   background-color: $orange;
   border-top: 1px solid $darkgray;
 
-  /* Add slide to menu */
-    // transform: translateX(-200px);
-    // transition: transform 400ms ease-in-out;
-
+  @media (min-width: $laptop) {
+    display: block;
+    width: auto;
+    border: none;
+    z-index: 1;
+    right: auto;
+    position: relative;
+  }
   // Toggle w/ Javascript
   &.showNav {
     display: block;
-    /* Add slide to menu */
-    //  transform: translateX(0);
+
+    @media (min-width: $laptop) {
+      display: none;
+    }
   }
 
   .menu {
     border: 1px solid $darkgray;
+
+    @media (min-width: $laptop) {
+      border: none;
+      display: flex;
+      justify-content: flex-end;
+    }
+
     li {
       padding: 1rem 0 0.8rem 0.8rem;
       border-bottom: 1px solid $darkgray;
+
+      @media (min-width: $laptop) {
+        border: none;
+        padding-left: 3rem !important;
+      }
 
       a {
         color: $black;
         font-size: 1.2rem;
         font-weight: bold;
         padding: 0.4rem;
-      }
-    }
+
+        @media (min-width: $laptop) {
+          transition: color ease 100ms;
+          padding: 0;
+
+          &:hover {
+            color: $darkgray;
+          }
+        }
+      }//a
+
+    }//li
   }
 }
