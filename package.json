@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.2",
     "@splidejs/splide": "^2.4.21",
     "gulp": "^4.0.2",
     "hamburgers": "^1.1.3",

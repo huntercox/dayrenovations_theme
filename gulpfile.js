@@ -19,16 +19,14 @@ function styles() {
 function watch() {
   browserSync.init({
     notify: false,
-    proxy: {
-      target: "https://dayindayout.test",
-    },
+    proxy: "https://dayindayout.test",
     https: {
-      key: "/Applications/MAMP/Library/OpenSSL/certs/dayindayout.test.key",
-      cert: "/Applications/MAMP/Library/OpenSSL/certs/dayindayout.test.crt"
+      key: "/Users/hsc/.localhost-ssl/ssl.huntercox.dev.key",
+      cert: "/Users/hsc/.localhost-ssl/ssl.huntercox.dev.crt"
     },
   });
   gulp.watch('./assets/scss/**/*.scss', styles);
-  gulp.watch('**/*.php', browserSync.reload);
+  gulp.watch('**/*.php').on('change', browserSync.reload);
 }
 
 exports.styles = styles;

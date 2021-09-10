@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-
   <main id="main" role="main">
     <?php if ( have_rows('home_banner') ) : ?>
       <section class="splide">
@@ -25,13 +24,34 @@
       </section><!-- /.banner -->
     <?php endif; ?>
 
+  <!-- Intro -->
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-      <article id="post-<?php the_ID(); ?>" role="article">
+      <article class="home__intro" id="post-<?php the_ID(); ?>" role="article">
         <div class="inner-content">
           <?php the_content(); ?>
         </div><!-- /.inner-content -->
-      </article>
+      </article><!-- /.home__intro -->
     <?php endwhile; endif; ?>
+
+  <!-- Contact Form -->
+    <div class="home__contact-form">
+      <div class="form__content">
+        <?php if ( get_field('home_form_heading') ) : ?>
+          <h2><?php echo get_field('home_form_heading'); ?></h2>
+        <?php endif; ?>
+
+        <?php if ( get_field('home_form_description') ) : ?>
+          <p><?php echo get_field('home_form_description'); ?></p>
+        <?php endif; ?>
+
+      </div><!-- /.form__content -->
+
+      <div class="form__cf7">
+        <?php echo do_shortcode( '[contact-form-7 id="15" title="Contact form 1"]' ); ?>
+      </div><!-- /.form__cf7 -->
+
+    </div><!-- /.home__contact-form -->
+
   </main>
 
 <?php get_footer(); ?>

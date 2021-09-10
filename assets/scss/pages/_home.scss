@@ -1,7 +1,65 @@
-.splide__list {
-  height: 300px;
-  overflow: hidden;
-}
-.splide__slide {
-  background-position: center bottom !important;
-}
+/* Home page */
+  .home #main {
+    display: grid;
+  }
+
+
+// Banner
+  .splide {
+    &__list {
+      height: 40vh;
+      overflow: hidden;
+    }
+    &__slide {
+      //background-position: center bottom !important;
+    }
+    &__pagination {
+      bottom: 2em;
+
+      &__page {
+        margin: 6px;
+      }
+    }
+  }
+
+// Intro (content)
+  .home__intro {
+    .inner-content {
+      width: 60%;
+      text-align: center;
+      margin: 40px auto;
+
+      p {
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+      }
+    }
+  }
+
+// Contact Form
+  .home__contact-form {
+    background-color: $darkorange;
+    grid-row: 3 / span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .form {
+      &__content {
+        width: 30%;
+        padding: 2rem 0;
+
+        h2 {
+          font-size: 2rem;
+        }
+        p {
+          font-size: 1.2rem;
+          line-height: 1.4rem;
+        }
+      }//.form__content
+
+      &__cf7 {
+
+      }//.form__cf7
+    }
+  }

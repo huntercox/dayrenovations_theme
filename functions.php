@@ -3,30 +3,46 @@
 // Enqueue Assets
 // ===================================================
   function dido_register_assets() {
-    // Stylesheets
-      wp_enqueue_style(
-        'main-stylesheet',
-        get_stylesheet_uri() // theme/style.css
-      );
 
-    // Scripts
-      // Main Custom Javascript
-        wp_enqueue_script(
-          'main-script',
-          get_template_directory_uri() . '/assets/js/main.js',
-          array(),
-          '1.0.0',
-          false
+    /**
+     * REGISTER
+     */
+      /* Stylesheets */
+        wp_register_style(
+          'main-stylesheet',
+          get_stylesheet_uri() // theme/style.css
         );
 
-      // Splide.JS
-        wp_enqueue_script(
-          'splide',
-          get_template_directory_uri() . '/node_modules/@splidejs/splide/dist/js/splide.min.js',
-          array(),
-          null,
-          false
-        );
+      /* Scripts */
+        // Splide.JS
+          wp_register_script(
+            'splide',
+            get_template_directory_uri() . '/node_modules/@splidejs/splide/dist/js/splide.min.js',
+            array(),
+            null,
+            false
+          );
+
+        // Main Custom Javascript
+          wp_register_script(
+            'main-script',
+            get_template_directory_uri() . '/assets/js/main.js',
+            array(),
+            '1.0.0',
+            false
+          );
+
+    /**
+     * ENQUEUE
+     */
+
+      wp_enqueue_style('main-stylesheet');
+      wp_enqueue_script('main-script');
+
+      if ( is_front_page() ) {
+        wp_enqueue_script('splide');
+      }
+
   }
   add_action( 'wp_enqueue_scripts', 'dido_register_assets' );
 
@@ -41,6 +57,7 @@
           'header-menu' => __( 'Header Menu' )
         )
       );
+      add_theme_support( 'post-thumbnails' );
   }
   add_action( 'init', 'dido_register_navmenu' );
 
@@ -59,3 +76,11 @@
     ));
 
   }
+
+ //Remove Gutenberg Block Library CSS from loading on the frontend
+  function dido_remove_wp_css(){
+    wp_dequeue_style( 'wp-block-library' );
+    wp_dequeue_style( 'wp-block-library-theme' );
+    wp_dequeue_style( 'wc-block-style' ); // Remove WooCommerce block CSS
+  }
+  add_action( 'wp_enqueue_scripts', 'dido_remove_wp_css', 100 );

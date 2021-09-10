@@ -3,28 +3,39 @@
   position: relative;
   z-index: 99;
 
-  &__inner {
-    margin: 0 10px;
+  .inner {
     display: flex;
-    justify-content: space-between;
+    padding: 1.2rem 0;
+
+    @media (min-width: $phone) {
+      padding: 1.5rem 0;
+      justify-content: space-between;
+    }
   }
 
 }
 
 // Logo / Company Name
 #logo {
-  font-size: 20px;
-  line-height: 42px;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  word-wrap: break-word;
+  width: 50%;
 
+  @media (min-width: $phone) {
+    font-size: 1.2rem;
+    line-height: 2.6rem;
+  }
   a {
     color: $black;
   }
-}
+}//#logo
 
 
 // Hamburger menu
 .hamburger {
   margin-top: 2px;
+
   &:focus {
     outline: none;
   }
@@ -36,11 +47,11 @@
   position: absolute;
   z-index: 98;
   left: auto;
-  right: 0;
+  right: 10%;
   top: 100%;
   bottom: auto;
-  width: 100px;
-  background-color: $black;
+  width: 10rem;
+  background-color: $orange;
   border-top: 1px solid $darkgray;
 
   /* Add slide to menu */
@@ -55,9 +66,17 @@
   }
 
   .menu {
+    border: 1px solid $darkgray;
     li {
-      padding: 6px 8px;
-      border-bottom: 1px solid $lightorange;
+      padding: 1rem 0 0.8rem 0.8rem;
+      border-bottom: 1px solid $darkgray;
+
+      a {
+        color: $black;
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding: 0.4rem;
+      }
     }
   }
 }

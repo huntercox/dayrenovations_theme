@@ -18,7 +18,7 @@
 		<div class="grid-container">
 
 		<header class="header" role="banner">
-			<div class="header__inner">
+			<div class="inner">
 
 				<h1 id="logo" class="h1"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></h1>
 
@@ -39,5 +39,5 @@
 					?>
 				</nav>
 
-			</div><!-- /.header__inner -->
+			</div><!-- /.inner -->
 		</header>

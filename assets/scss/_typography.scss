@@ -1,17 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Roboto:ital,wght@0,300;0,700;1,300;1,700&display=swap');
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&family=Roboto:ital,wght@0,300;0,700;1,300;1,700&display=swap');
+
+// Font Awesome
+@import './node_modules/@fortawesome/fontawesome-free/scss/fontawesome';
+@import './node_modules/@fortawesome/fontawesome-free/scss/solid';
+@import './node_modules/@fortawesome/fontawesome-free/scss/brands';
+
 
 body {
   color: $black;
   font-family: 'Roboto', sans-serif;
   letter-spacing: 0.5px;
-}
-header {
-
+  font-size: 16px;
 }
 
 // Headings
+h1 {
+  font-family: 'Rock Salt', cursive;
+}
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Nothing You Could Do', cursive;
   font-weight: bold;
 }
 
@@ -36,7 +43,7 @@ a {
 
 // Pages
 .page {
-  h2, &__title {
+  &__title {
     color: $orange;
     font-size: 24px;
     font-weight: bold;
@@ -45,7 +52,7 @@ a {
     margin: 10px 0 40px 0;
   }//.page__title
 
-  h3, &__subheading {
+  &__subheading {
     margin: 20px -10px 10px -10px;
     padding: 4px 0px 5px 10px;
     background-color: $lightorange;
