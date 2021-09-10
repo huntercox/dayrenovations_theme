@@ -20,6 +20,13 @@
             get_template_directory_uri() . '/node_modules/@splidejs/splide/dist/js/splide.min.js',
             array(),
             null,
+            true
+          );
+          wp_register_script(
+            'splide-init',
+            get_template_directory_uri() . '/assets/js/splide.js',
+            array('splide'),
+            null,
             false
           );
 
@@ -41,6 +48,7 @@
 
       if ( is_front_page() ) {
         wp_enqueue_script('splide');
+        wp_enqueue_script('splide-init');
       }
 
   }
