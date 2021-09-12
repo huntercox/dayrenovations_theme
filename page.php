@@ -3,7 +3,7 @@
   <main id="main" role="main">
     <div class="inner">
       <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-        <article id="post-<?php the_ID(); ?>" role="article" class=="page">
+        <article id="post-<?php the_ID(); ?>" role="article" class="page">
 
           <h2 class="page__title"><?php the_title(); ?></h2>
 

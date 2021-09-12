@@ -8,14 +8,14 @@
   $slug = get_post_field('post_name');
 
   ?>
-  <div class="project project_<?php echo $slug.' project_'.$id;?>">
-    <div class="top" style="background-image: url('<?php echo $feat_img_url; ?>');">
+  <div class="project project_<?php echo esc_attr($slug).' project_'.esc_attr($id);?>">
+    <div class="top" style="background-image: url('<?php echo esc_url($feat_img_url); ?>');">
       <div class="overlay">
         <h4><a href="<?php echo get_permalink(); ?>"> <?php echo get_the_title(); ?></a></h4>
         <?php
           echo '<ul class="services">';
             foreach ( get_the_terms( get_the_ID(), 'service' ) as $tax ) {
-              echo '<li><strong>' . __( $tax->name ) . '</strong></li>';
+              echo '<li><strong>' . esc_html(__( $tax->name )) . '</strong></li>';
             }
           echo '</ul>';
         ?>

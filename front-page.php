@@ -37,11 +37,11 @@
     <div class="home__contact-form">
       <div class="form__content">
         <?php if ( get_field('home_form_heading') ) : ?>
-          <h2><?php echo get_field('home_form_heading'); ?></h2>
+          <h2><?php echo esc_html( get_field('home_form_heading') ); ?></h2>
         <?php endif; ?>
 
         <?php if ( get_field('home_form_description') ) : ?>
-          <p><?php echo get_field('home_form_description'); ?></p>
+          <p><?php echo esc_html( get_field('home_form_description') ); ?></p>
         <?php endif; ?>
 
       </div><!-- /.form__content -->
