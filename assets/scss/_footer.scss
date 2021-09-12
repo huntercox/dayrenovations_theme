@@ -6,18 +6,97 @@ footer {
   border-top: 1px solid $darkgray;
   color: $lightgray;
 
+
+  .inner {
+    display: flex;
+    justify-content: space-around;
+  }
   p {
-    padding: 4px 0;
-    font-size: 12px;
-    font-weight: bold;
+
   }
 
   a {
-    color: $lightorange;
   }
-  .bottom-footer {
-    border-top: 1px solid $gray;
-    padding: 6px 0;
-    text-align: center;
+
+  .contact-info {
+
+    li {
+      padding: 8px 0;
+      font-size: 1rem;
+      font-weight: bold;
+
+      i.fas, i.fab {
+        margin-right: 6px;
+        font-size: 1.4rem;
+      }
+
+      &.email {
+        i {
+          color: $lightorange;
+          font-size: 1.3rem;
+          margin-right: 3px;
+        }
+        a {
+          color: $darkorange;
+          transition: color ease 100ms;
+
+          &:hover {
+            color: lighten($darkorange, 10);
+          }
+        }
+      }
+      &.phone {
+        color: $lightgray;
+        font-size: 0.9rem;
+        padding: 8px 0 9px 0;
+
+        i {
+          color: $gray;
+          margin-right: 8px;
+          position: relative;
+          top: 2px;
+        }
+      }
+      &.facebook {
+        color: #166bda;
+
+        i {
+          position: relative;
+          top: 1px;
+        }
+        a {
+          color: inherit;
+          transition: color ease 100ms;
+
+          &:hover {
+            color: lighten(#166bda, 10);
+          }
+        }
+      }
+    }
   }
+
+  .sub-menu {
+    border-left: 2px solid $darkgray;
+    padding-left: 2rem;
+
+    nav ul li {
+      padding: 0.6rem 0;
+
+      a {
+        color: $orange;
+        transition: color ease 150ms;
+
+        &:hover {
+          color: $lightorange;
+        }
+      }
+    }
+  }
+
+  // .bottom-footer {
+  //   border-top: 1px solid $gray;
+  //   padding: 6px 0;
+  //   text-align: center;
+  // }
 }
