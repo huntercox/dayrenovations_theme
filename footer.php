@@ -10,20 +10,20 @@
         <?php if ( $email ) : ?>
           <li class="email">
             <i class="fas fa-paper-plane"></i>
-            <a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>
+            <a href="mailto:<?php echo esc_attr($email); ?>"><?php echo esc_html($email); ?></a>
           </li>
         <?php endif; ?>
 
         <?php if ( $phone ) : ?>
           <li class="phone">
-            <i class="fas fa-phone-square-alt"></i><?php echo $phone; ?>
+            <i class="fas fa-phone-square-alt"></i><?php echo esc_html($phone); ?>
           </li>
         <?php endif; ?>
 
         <?php if ( $facebook ) : ?>
           <li class="facebook">
             <i class="fab fa-facebook-square"></i>
-            <a href="<?php echo $facebook; ?>" target="_blank">Facebook</a>
+            <a href="<?php echo esc_url($facebook); ?>" target="_blank">Facebook</a>
           </li>
         <?php endif; ?>
       </ul>
