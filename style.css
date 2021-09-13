@@ -5628,30 +5628,31 @@ footer {
       line-height: 1.4rem; }
 
 [class*="-list"] {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; }
-  [class*="-list"] > div {
-    width: 45%; }
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem; }
 
 .projects-list {
-  margin-top: 2rem; }
+  margin-top: 1rem; }
   .projects-list .project {
     background-color: rgba(212, 127, 0, 0.3);
     border: 2px solid #d47f00; }
     .projects-list .project .top {
-      height: 50%; }
-    .projects-list .project h4 {
-      font-size: 1.3rem;
-      margin-bottom: 8px; }
-      .projects-list .project h4 a {
-        color: #464646; }
+      height: 180px; }
+      .projects-list .project .top .overlay {
+        background-color: rgba(255, 255, 255, 0.75);
+        padding: 0.8rem 1.2rem 0.7rem; }
+        .projects-list .project .top .overlay h4 {
+          font-size: 1.3rem;
+          margin-bottom: 7px; }
+          .projects-list .project .top .overlay h4 a {
+            color: #d47f00; }
+        .projects-list .project .top .overlay .services {
+          position: relative; }
+          .projects-list .project .top .overlay .services::before {
+            content: "Services: ";
+            font-size: 1rem; }
+          .projects-list .project .top .overlay .services li {
+            display: inline-block; }
     .projects-list .project .bottom .post-content {
-      padding: 1rem 1.4rem; }
-    .projects-list .project .services {
-      position: relative; }
-      .projects-list .project .services::before {
-        content: "Services: ";
-        font-size: 1rem; }
-      .projects-list .project .services li {
-        display: inline-block; }
+      padding: 0.8rem 1.2rem; }
