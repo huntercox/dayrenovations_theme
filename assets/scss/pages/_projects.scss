@@ -58,5 +58,13 @@
       }
     }//.bottom
 
+    // Featured
+    &.featured {
+      grid-column: 1 / span 2;
+
+      .top {
+        height: 220px;
+      }
+    }
   }
 }

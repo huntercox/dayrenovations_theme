@@ -5656,3 +5656,7 @@ footer {
             display: inline-block; }
     .projects-list .project .bottom .post-content {
       padding: 0.8rem 1.2rem; }
+    .projects-list .project.featured {
+      grid-column: 1 / span 2; }
+      .projects-list .project.featured .top {
+        height: 220px; }

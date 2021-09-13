@@ -7,8 +7,16 @@
   $id   = get_post_field('ID');
   $slug = get_post_field('post_name');
 
+  $featured = get_field('featured_project');
+
+
+  if ($featured) {
+    $class = 'featured project project_'.esc_attr($slug).' project_'.esc_attr($id).'';
+  } else {
+    $class = 'project project_'.esc_attr($slug).' project_'.esc_attr($id).'';
+  }
   ?>
-  <div class="project project_<?php echo esc_attr($slug).' project_'.esc_attr($id);?>">
+  <div class="<?php echo $class; ?>">
     <div class="top" style="background-image: url('<?php echo esc_url($feat_img_url); ?>');">
       <div class="overlay">
         <h4><a href="<?php echo get_permalink(); ?>"> <?php echo get_the_title(); ?></a></h4>
