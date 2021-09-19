@@ -71,6 +71,7 @@
 
   add_theme_support( 'post-thumbnails' );
   add_image_size( 'service-area', 360, 180, true);
+  add_image_size( 'featured-banner', 1000, 400, true);
 
 // ===================================================
 // ACF Options Page
