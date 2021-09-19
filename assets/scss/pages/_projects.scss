@@ -33,6 +33,11 @@
 
           a {
             color: $darkorange;
+            transition: color ease 100ms;
+
+            &:hover {
+              color: $darkgray;
+            }
           }
         }
 
@@ -60,7 +65,8 @@
 
     // Featured
     &.featured {
-      grid-column: 1 / span 2;
+      grid-column: 1 / span 2; // 2 columns
+      grid-row: 1 / 1; // move to top
 
       .top {
         height: 220px;

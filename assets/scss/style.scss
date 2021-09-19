@@ -15,10 +15,17 @@ Author: Hunter Cox
 
 @import 'typography';
 @import 'layout';
-@import 'header';
-@import 'footer';
-@import 'banner';
 
-//  Pages
+// Non-reusable sections
+@import 'includes/header';
+@import 'includes/footer';
+
+// Reusable components
+@import 'components/banner';
+
+// Pages
 @import 'pages/home';
 @import 'pages/projects';
+
+// Templates
+@import 'templates/single-project';
