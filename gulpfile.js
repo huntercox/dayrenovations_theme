@@ -1,6 +1,6 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
-const del = require('del');
+const cleanCSS = require('gulp-clean-css');
 const browserSync = require('browser-sync').create();
 
 // compile scss to css
@@ -11,9 +11,19 @@ function styles() {
     // 2. pass file to Sass Compiler
     .pipe(sass())
     // 3. locate destination for compiled CSS
-    .pipe(gulp.dest('./'))
+    .pipe(gulp.dest('./assets/css/'))
     // 4. stream changes to all browsers
     .pipe(browserSync.stream())
+}
+
+function minify() {
+
+  // 1. locate source SCSS files
+  return gulp.src('./assets/css/*.css')
+    // 2. pass file to Sass Compiler
+    .pipe(cleanCSS({ compatibility: 'ie8' }))
+    // 3. locate destination for compiled CSS
+    .pipe(gulp.dest('./'))
 }
 
 function watch() {
@@ -31,3 +41,5 @@ function watch() {
 
 exports.styles = styles;
 exports.watch = watch;
+
+exports.minify = minify;
