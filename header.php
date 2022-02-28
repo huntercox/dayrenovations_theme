@@ -19,8 +19,22 @@
 
 		<header class="header" role="banner">
 			<div class="inner">
+				<?php
+					$logo = get_field('logo', 'option');
 
-				<h1 id="logo" class="h1"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></h1>
+					if ( $logo ) :
+						$attachment_id = $logo;
+						$size = "full";
+						$url = wp_get_attachment_image_src( $attachment_id, $size );
+						?>
+							<a class="logo__wrap" href="<?php echo home_url(); ?>" rel="nofollow" title="<?php bloginfo('name'); ?>">
+								<div class="logo" style="background-image: url('<?php echo $url[0]; ?>');"></div>
+							</a>
+						<?php
+					else : ?>
+						<h1 id="logo" class="h1"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></h1><?php
+					endif;
+				?>
 
 				<button class="hamburger hamburger--spin" type="button">
 					<span class="hamburger-box">

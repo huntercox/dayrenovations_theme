@@ -1,5 +1,5 @@
 .header {
-  background-color: $orange;
+  background-color: $lightgray;
   position: relative;
   z-index: 99;
 
@@ -8,28 +8,27 @@
     padding: 1.2rem 0;
 
     @media (min-width: $phone) {
-      padding: 1.5rem 0;
+      padding: 10px 0;
       justify-content: space-between;
     }
   }
 
-}
+}//.header
 
-// Logo / Company Name
-#logo {
-  font-size: 0.8rem;
-  line-height: 1.2rem;
-  word-wrap: break-word;
-  width: 50%;
+// Logo
+.logo__wrap {
+  display: block;
+  width: 40%;
 
-  @media (min-width: $phone) {
-    font-size: 1.2rem;
-    line-height: 2.6rem;
-  }
-  a {
-    color: $black;
-  }
-}//#logo
+  .logo {
+    height: 100px;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }//.logo
+
+}//.logo__wrap
+
 
 
 // Hamburger menu
@@ -55,7 +54,6 @@
   top: 100%;
   bottom: auto;
   width: 10rem;
-  background-color: $orange;
   border-top: 1px solid $darkgray;
 
   @media (min-width: $laptop) {
@@ -94,9 +92,11 @@
       }
 
       a {
-        color: $black;
-        font-size: 1.2rem;
+        color: $darker_orange;
+        font-size: 1.5rem;
         font-weight: bold;
+        letter-spacing: 1px;
+        text-transform: uppercase;
         padding: 0.4rem;
 
         @media (min-width: $laptop) {

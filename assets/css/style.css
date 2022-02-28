@@ -5454,7 +5454,7 @@ body {
       line-height: 2rem; }
 
 .header {
-  background-color: #ff950a;
+  background-color: white;
   position: relative;
   z-index: 99; }
   .header .inner {
@@ -5465,17 +5465,14 @@ body {
         padding: 1.5rem 0;
         justify-content: space-between; } }
 
-#logo {
-  font-size: 0.8rem;
-  line-height: 1.2rem;
-  word-wrap: break-word;
-  width: 50%; }
-  @media (min-width: 567px) {
-    #logo {
-      font-size: 1.2rem;
-      line-height: 2.6rem; } }
-  #logo a {
-    color: #191919; }
+.logo__wrap {
+  display: block;
+  width: 40%; }
+  .logo__wrap .logo {
+    height: 200px;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat; }
 
 .hamburger {
   margin-top: 2px; }

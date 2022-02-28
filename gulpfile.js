@@ -1,28 +1,21 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const cleanCSS = require('gulp-clean-css');
+const sourcemaps = require('gulp-sourcemaps');
 const browserSync = require('browser-sync').create();
 
-// compile scss to css
 function styles() {
-
-  // 1. locate source SCSS files
   return gulp.src('./assets/scss/**/*.scss')
-    // 2. pass file to Sass Compiler
+    .pipe(sourcemaps.init())
     .pipe(sass())
-    // 3. locate destination for compiled CSS
-    .pipe(gulp.dest('./assets/css/'))
-    // 4. stream changes to all browsers
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('./'))
     .pipe(browserSync.stream())
 }
 
 function minify() {
-
-  // 1. locate source SCSS files
   return gulp.src('./assets/css/*.css')
-    // 2. pass file to Sass Compiler
     .pipe(cleanCSS({ compatibility: 'ie8' }))
-    // 3. locate destination for compiled CSS
     .pipe(gulp.dest('./'))
 }
 

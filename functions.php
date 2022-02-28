@@ -13,7 +13,7 @@
           get_stylesheet_uri() // theme/style.css
         );
 
-      /* Scripts */
+      /* Scripts  */
         // Splide.JS
           wp_register_script(
             'splide',
@@ -29,6 +29,7 @@
             null,
             false
           );
+
 
         // Main Custom Javascript
           wp_register_script(
@@ -47,8 +48,8 @@
       wp_enqueue_script('main-script');
 
       if ( is_front_page() ) {
-        wp_enqueue_script('splide');
         wp_enqueue_script('splide-init');
+        wp_enqueue_script('splide');
       }
 
   }
@@ -78,13 +79,12 @@
 // ===================================================
   if( function_exists('acf_add_options_page') ) {
 
-    acf_add_options_page(array(
-      'page_title' 	=> 'Site Options',
-      'menu_title'	=> 'Site Options',
-      'menu_slug' 	=> 'site-options',
-      'capability'	=> 'edit_posts',
-      'redirect'		=> false
-    ));
+    acf_add_options_page();
+
+    acf_add_options_sub_page('General');
+    acf_add_options_sub_page('Header');
+    acf_add_options_sub_page('Footer');
+
 
   }
 
